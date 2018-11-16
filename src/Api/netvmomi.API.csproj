@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>netvmomi.api</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Mike Lloyd</Authors>
+    <Company />
+    <Product>netvmomi.API</Product>
+    <PackageId>netvmomi.API_Mike_Lloyd</PackageId>
+    <PackageTags>vsphere,</PackageTags>
+    <Description>VMware vSphere 6 API definitions for .NET Core.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="RestSharp" Version="106.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Client\netvmomi.APIClient.csproj" />
+    <ProjectReference Include="..\Model\netvmomi.Models.csproj" />
+  </ItemGroup>
+
+</Project>
