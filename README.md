@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/reboot3times/netvmomi/_apis/build/status/mxplusb.netvmomi)](https://dev.azure.com/reboot3times/netvmomi/_build/latest?definitionId=1)
+
 # netvmomi
 
 .NET Standard 2.0 SDK for the VMware vSphere 6 REST API.

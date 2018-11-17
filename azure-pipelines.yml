@@ -7,17 +7,11 @@ pool:
   vmImage: "Ubuntu 16.04"
   
 variables:
-    buildConfiguration: "Release"
+  buildConfiguration: "Release"
+- group: mxplusb.netvmomi
+
 
 steps:
-- script: dotnet restore
-  displayName: 'dotnet restore'
+- script: ./build.sh
+  displayName: all the things.
 
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'pack'
-    configuration: 'release'
-    packagesToPack: "src/**/*.csproj"
