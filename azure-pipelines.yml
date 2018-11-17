@@ -8,7 +8,7 @@ pool:
   
 variables:
   buildConfiguration: "Release"
-- group: mxplusb.netvmomi
+  group: mxplusb.netvmomi
 
 
 steps:
