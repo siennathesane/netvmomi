@@ -3,6 +3,17 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>netvmomi.Client</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Mike Lloyd</Authors>
+    <Company />
+    <Description>VMware vSphere 6 API client for .NET Standard 2.0.</Description>
+    <Copyright>Mike Lloyd</Copyright>
+    <PackageLicenseUrl>https://github.com/mxplusb/netvmomi/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mxplusb/netvmomi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mxplusb/netvmomi</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>vsphere,net-standard,net-core,net-framework,vmware</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

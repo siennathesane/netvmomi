@@ -3,6 +3,15 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>nvmomi.Model</RootNamespace>
+    <Authors>Mike Lloyd</Authors>
+    <Company />
+    <PackageTags>vsphere,net-standard,net-core,net-framework,vmware</PackageTags>
+    <Description>VMware vSphere 6 API Models for .NET Standard 2.0.</Description>
+    <Copyright>Mike Lloyd</Copyright>
+    <PackageLicenseUrl>https://github.com/mxplusb/netvmomi/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mxplusb/netvmomi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mxplusb/netvmomi</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>

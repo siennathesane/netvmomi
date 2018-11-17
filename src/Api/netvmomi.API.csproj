@@ -7,9 +7,15 @@
     <Authors>Mike Lloyd</Authors>
     <Company />
     <Product>netvmomi.API</Product>
-    <PackageId>netvmomi.API_Mike_Lloyd</PackageId>
-    <PackageTags>vsphere,</PackageTags>
-    <Description>VMware vSphere 6 API definitions for .NET Core.</Description>
+    <PackageId>netvmomi.API</PackageId>
+    <PackageTags>vsphere,net-standard,net-core,net-framework,vmware</PackageTags>
+    <Description>VMware vSphere 6 APIs for .NET Standard 2.0.</Description>
+    <PackageLicenseUrl>https://github.com/mxplusb/netvmomi/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mxplusb/netvmomi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mxplusb/netvmomi</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <Copyright>Mike Lloyd</Copyright>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>

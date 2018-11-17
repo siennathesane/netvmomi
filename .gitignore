@@ -4,7 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # site settings.
-src/**/site_/
+src/**/_site/
 src/**/log.txt
 
 # User-specific files
