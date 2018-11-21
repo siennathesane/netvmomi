@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LICENSE.md = LICENSE.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netvmomi.API.TechPreview", "src\netvmomi.API.TechPreview\netvmomi.API.TechPreview.csproj", "{18C6ADC8-52D9-497E-AA0F-88512B204776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netvmomi.API.TechPreview", "src\netvmomi.API.TechPreview\netvmomi.API.TechPreview.csproj", "{18C6ADC8-52D9-497E-AA0F-88512B204776}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +83,7 @@ Global
 		{E861F5D5-FD2A-4E43-9375-C8E6AE12870C} = {A6D79098-4176-46B9-ADF8-1C6EDDA82F64}
 		{E4500D76-07A4-4993-909A-CF06637D3C19} = {A6D79098-4176-46B9-ADF8-1C6EDDA82F64}
 		{086281BF-C1B0-4BEB-B2F2-1CEFDA755BAD} = {A6D79098-4176-46B9-ADF8-1C6EDDA82F64}
+		{18C6ADC8-52D9-497E-AA0F-88512B204776} = {A6D79098-4176-46B9-ADF8-1C6EDDA82F64}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A435369-FC57-4E7B-9E42-975D350D26B2}

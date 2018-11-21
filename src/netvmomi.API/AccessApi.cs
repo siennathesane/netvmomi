@@ -13,53 +13,53 @@ namespace netvmomi.API {
         /// </summary>
         /// <param name="contentType"></param>
         /// <returns></returns>
-        void ApplianceAccessConsolecliGet(string contentType);
+        void GetApplianceAccessConsoleCLI();
         /// <summary>
         /// ConsoleCLI-disable TODO: Add Description
         /// </summary>
         /// <param name="contentType"></param>
         /// <param name="body"></param>
         /// <returns></returns>
-        void ApplianceAccessConsolecliPut(string contentType, ConsoleCLIDisableRequest body);
+        void ApplianceAccessConsolecliPut(ConsoleCLIDisableRequest body);
         /// <summary>
         /// DCUI TODO: Add Description
         /// </summary>
         /// <param name="contentType"></param>
         /// <returns></returns>
-        void ApplianceAccessDcuiGet(string contentType);
+        void ApplianceAccessDcuiGet();
         /// <summary>
         /// DCUI-disable TODO: Add Description
         /// </summary>
         /// <param name="contentType"></param>
         /// <param name="body"></param>
         /// <returns></returns>
-        void ApplianceAccessDcuiPut(string contentType, DCUIDisableRequest body);
+        void ApplianceAccessDcuiPut(DCUIDisableRequest body);
         /// <summary>
         /// Shell TODO: Add Description
         /// </summary>
         /// <param name="contentType"></param>
         /// <returns></returns>
-        void ApplianceAccessShellGet(string contentType);
+        void ApplianceAccessShellGet();
         /// <summary>
         /// Shell-disable TODO: Add Description
         /// </summary>
         /// <param name="contentType"></param>
         /// <param name="body"></param>
         /// <returns></returns>
-        void ApplianceAccessShellPut(string contentType, ShellDisableRequest body);
+        void ApplianceAccessShellPut(ShellDisableRequest body);
         /// <summary>
         /// SSH TODO: Add Description
         /// </summary>
         /// <param name="contentType"></param>
         /// <returns></returns>
-        void ApplianceAccessSshGet(string contentType);
+        void ApplianceAccessSshGet();
         /// <summary>
         /// SSH-disable TODO: Add Description
         /// </summary>
         /// <param name="contentType"></param>
         /// <param name="body"></param>
         /// <returns></returns>
-        void ApplianceAccessSshPut(string contentType, SSHDisableRequest body);
+        void ApplianceAccessSshPut(SSHDisableRequest body);
     }
 
     /// <summary>
@@ -117,12 +117,7 @@ namespace netvmomi.API {
         /// </summary>
         /// <param name="contentType"></param> 
         /// <returns></returns>            
-        public void ApplianceAccessConsolecliGet(string contentType) {
-
-            // verify the required parameter 'contentType' is set
-            if (contentType == null) {
-                throw new ApiException(400, "Missing required parameter 'contentType' when calling ApplianceAccessConsolecliGet");
-            }
+        public void GetApplianceAccessConsoleCLI() {
 
             string path = "/appliance/access/consolecli";
             path = path.Replace("{format}", "json");
@@ -133,9 +128,7 @@ namespace netvmomi.API {
             Dictionary<string, FileParameter> fileParams = new Dictionary<string, FileParameter>();
             string postBody = null;
 
-            if (contentType != null) {
-                headerParams.Add("Content-Type", ApiClient.ParameterToString(contentType)); // header parameter
-            }
+            headerParams.Add("Content-Type", ApiClient.ParameterToString("application/json"));
 
             // authentication setting, if any
             string[] authSettings = new string[] { "auth" };
@@ -144,9 +137,9 @@ namespace netvmomi.API {
             IRestResponse response = (IRestResponse)ApiClient.CallApi(path, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
 
             if (((int)response.StatusCode) >= 400) {
-                throw new ApiException((int)response.StatusCode, "Error calling ApplianceAccessConsolecliGet: " + response.Content, response.Content);
+                throw new ApiException((int)response.StatusCode, "Error calling GetApplianceAccessConsoleCLI: " + response.Content, response.Content);
             } else if (response.StatusCode == 0) {
-                throw new ApiException((int)response.StatusCode, "Error calling ApplianceAccessConsolecliGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException((int)response.StatusCode, "Error calling GetApplianceAccessConsoleCLI: " + response.ErrorMessage, response.ErrorMessage);
             }
 
             return;
@@ -158,12 +151,7 @@ namespace netvmomi.API {
         /// <param name="contentType"></param> 
         /// <param name="body"></param> 
         /// <returns></returns>            
-        public void ApplianceAccessConsolecliPut(string contentType, ConsoleCLIDisableRequest body) {
-
-            // verify the required parameter 'contentType' is set
-            if (contentType == null) {
-                throw new ApiException(400, "Missing required parameter 'contentType' when calling ApplianceAccessConsolecliPut");
-            }
+        public void ApplianceAccessConsolecliPut(ConsoleCLIDisableRequest body) {
 
             // verify the required parameter 'body' is set
             if (body == null) {
@@ -179,9 +167,7 @@ namespace netvmomi.API {
             Dictionary<string, FileParameter> fileParams = new Dictionary<string, FileParameter>();
             string postBody = null;
 
-            if (contentType != null) {
-                headerParams.Add("Content-Type", ApiClient.ParameterToString(contentType)); // header parameter
-            }
+            headerParams.Add("Content-Type", ApiClient.ParameterToString("application/json"));
 
             postBody = ApiClient.Serialize(body); // http body (model) parameter
 
@@ -205,12 +191,7 @@ namespace netvmomi.API {
         /// </summary>
         /// <param name="contentType"></param> 
         /// <returns></returns>            
-        public void ApplianceAccessDcuiGet(string contentType) {
-
-            // verify the required parameter 'contentType' is set
-            if (contentType == null) {
-                throw new ApiException(400, "Missing required parameter 'contentType' when calling ApplianceAccessDcuiGet");
-            }
+        public void ApplianceAccessDcuiGet() {
 
             string path = "/appliance/access/dcui";
             path = path.Replace("{format}", "json");
@@ -221,9 +202,7 @@ namespace netvmomi.API {
             Dictionary<string, FileParameter> fileParams = new Dictionary<string, FileParameter>();
             string postBody = null;
 
-            if (contentType != null) {
-                headerParams.Add("Content-Type", ApiClient.ParameterToString(contentType)); // header parameter
-            }
+            headerParams.Add("Content-Type", ApiClient.ParameterToString("appliation/json"));
 
             // authentication setting, if any
             string[] authSettings = new string[] { "auth" };
@@ -246,12 +225,7 @@ namespace netvmomi.API {
         /// <param name="contentType"></param> 
         /// <param name="body"></param> 
         /// <returns></returns>            
-        public void ApplianceAccessDcuiPut(string contentType, DCUIDisableRequest body) {
-
-            // verify the required parameter 'contentType' is set
-            if (contentType == null) {
-                throw new ApiException(400, "Missing required parameter 'contentType' when calling ApplianceAccessDcuiPut");
-            }
+        public void ApplianceAccessDcuiPut(DCUIDisableRequest body) {
 
             // verify the required parameter 'body' is set
             if (body == null) {
@@ -267,9 +241,7 @@ namespace netvmomi.API {
             Dictionary<string, FileParameter> fileParams = new Dictionary<string, FileParameter>();
             string postBody = null;
 
-            if (contentType != null) {
-                headerParams.Add("Content-Type", ApiClient.ParameterToString(contentType)); // header parameter
-            }
+            headerParams.Add("Content-Type", ApiClient.ParameterToString("application/json"));
 
             postBody = ApiClient.Serialize(body); // http body (model) parameter
 
@@ -293,12 +265,7 @@ namespace netvmomi.API {
         /// </summary>
         /// <param name="contentType"></param> 
         /// <returns></returns>            
-        public void ApplianceAccessShellGet(string contentType) {
-
-            // verify the required parameter 'contentType' is set
-            if (contentType == null) {
-                throw new ApiException(400, "Missing required parameter 'contentType' when calling ApplianceAccessShellGet");
-            }
+        public void ApplianceAccessShellGet() {
 
             string path = "/appliance/access/shell";
             path = path.Replace("{format}", "json");
@@ -309,9 +276,7 @@ namespace netvmomi.API {
             Dictionary<string, FileParameter> fileParams = new Dictionary<string, FileParameter>();
             string postBody = null;
 
-            if (contentType != null) {
-                headerParams.Add("Content-Type", ApiClient.ParameterToString(contentType)); // header parameter
-            }
+            headerParams.Add("Content-Type", ApiClient.ParameterToString("application/json"));
 
             // authentication setting, if any
             string[] authSettings = new string[] { "auth" };
@@ -334,12 +299,7 @@ namespace netvmomi.API {
         /// <param name="contentType"></param> 
         /// <param name="body"></param> 
         /// <returns></returns>            
-        public void ApplianceAccessShellPut(string contentType, ShellDisableRequest body) {
-
-            // verify the required parameter 'contentType' is set
-            if (contentType == null) {
-                throw new ApiException(400, "Missing required parameter 'contentType' when calling ApplianceAccessShellPut");
-            }
+        public void ApplianceAccessShellPut(ShellDisableRequest body) {
 
             // verify the required parameter 'body' is set
             if (body == null) {
@@ -355,9 +315,7 @@ namespace netvmomi.API {
             Dictionary<string, FileParameter> fileParams = new Dictionary<string, FileParameter>();
             string postBody = null;
 
-            if (contentType != null) {
-                headerParams.Add("Content-Type", ApiClient.ParameterToString(contentType)); // header parameter
-            }
+            headerParams.Add("Content-Type", ApiClient.ParameterToString("application/json"));
 
             postBody = ApiClient.Serialize(body); // http body (model) parameter
 
@@ -381,12 +339,7 @@ namespace netvmomi.API {
         /// </summary>
         /// <param name="contentType"></param> 
         /// <returns></returns>            
-        public void ApplianceAccessSshGet(string contentType) {
-
-            // verify the required parameter 'contentType' is set
-            if (contentType == null) {
-                throw new ApiException(400, "Missing required parameter 'contentType' when calling ApplianceAccessSshGet");
-            }
+        public void ApplianceAccessSshGet() {
 
             string path = "/appliance/access/ssh";
             path = path.Replace("{format}", "json");
@@ -397,9 +350,7 @@ namespace netvmomi.API {
             Dictionary<string, FileParameter> fileParams = new Dictionary<string, FileParameter>();
             string postBody = null;
 
-            if (contentType != null) {
-                headerParams.Add("Content-Type", ApiClient.ParameterToString(contentType)); // header parameter
-            }
+            headerParams.Add("Content-Type", ApiClient.ParameterToString("application/json"));
 
             // authentication setting, if any
             string[] authSettings = new string[] { "auth" };
@@ -422,12 +373,7 @@ namespace netvmomi.API {
         /// <param name="contentType"></param> 
         /// <param name="body"></param> 
         /// <returns></returns>            
-        public void ApplianceAccessSshPut(string contentType, SSHDisableRequest body) {
-
-            // verify the required parameter 'contentType' is set
-            if (contentType == null) {
-                throw new ApiException(400, "Missing required parameter 'contentType' when calling ApplianceAccessSshPut");
-            }
+        public void ApplianceAccessSshPut(SSHDisableRequest body) {
 
             // verify the required parameter 'body' is set
             if (body == null) {
@@ -443,9 +389,7 @@ namespace netvmomi.API {
             Dictionary<string, FileParameter> fileParams = new Dictionary<string, FileParameter>();
             string postBody = null;
 
-            if (contentType != null) {
-                headerParams.Add("Content-Type", ApiClient.ParameterToString(contentType)); // header parameter
-            }
+            headerParams.Add("Content-Type", ApiClient.ParameterToString("application/json"));
 
             postBody = ApiClient.Serialize(body); // http body (model) parameter
 
