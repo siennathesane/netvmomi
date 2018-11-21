@@ -7,7 +7,7 @@ namespace netvmomi.API {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IAccessApi {
+    public interface IAccess {
         /// <summary>
         /// ConsoleCLI TODO: Add Description
         /// </summary>
@@ -65,13 +65,13 @@ namespace netvmomi.API {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class AccessApi : IAccessApi {
+    public class AccessAPI : IAccess {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AccessApi"/> class.
+        /// Initializes a new instance of the <see cref="AccessAPI"/> class.
         /// </summary>
         /// <param name="apiClient"> an instance of ApiClient (optional)</param>
         /// <returns></returns>
-        public AccessApi(ApiClient apiClient = null) {
+        public AccessAPI(ApiClient apiClient = null) {
             if (apiClient == null) // use the default one in Configuration
 {
                 ApiClient = Configuration.DefaultApiClient;
@@ -81,10 +81,10 @@ namespace netvmomi.API {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AccessApi"/> class.
+        /// Initializes a new instance of the <see cref="AccessAPI"/> class.
         /// </summary>
         /// <returns></returns>
-        public AccessApi(string basePath) {
+        public AccessAPI(string basePath) {
             ApiClient = new ApiClient(basePath);
         }
 
