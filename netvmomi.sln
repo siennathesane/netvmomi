@@ -4,16 +4,18 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A6D79098-4176-46B9-ADF8-1C6EDDA82F64}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netvmomi.API", "src\Api\netvmomi.API.csproj", "{E861F5D5-FD2A-4E43-9375-C8E6AE12870C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netvmomi.API", "src\netvmomi.API\netvmomi.API.csproj", "{E861F5D5-FD2A-4E43-9375-C8E6AE12870C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netvmomi.APIClient", "src\Client\netvmomi.APIClient.csproj", "{E4500D76-07A4-4993-909A-CF06637D3C19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netvmomi.APIClient", "src\netvmomi.Client\netvmomi.APIClient.csproj", "{E4500D76-07A4-4993-909A-CF06637D3C19}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netvmomi.Models", "src\Model\netvmomi.Models.csproj", "{086281BF-C1B0-4BEB-B2F2-1CEFDA755BAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netvmomi.Models", "src\netvmomi.Model\netvmomi.Models.csproj", "{086281BF-C1B0-4BEB-B2F2-1CEFDA755BAD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7503DDDD-7CBE-42CF-BF4C-FA2554304421}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.md = LICENSE.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netvmomi.API.TechPreview", "src\netvmomi.API.TechPreview\netvmomi.API.TechPreview.csproj", "{18C6ADC8-52D9-497E-AA0F-88512B204776}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,18 @@ Global
 		{086281BF-C1B0-4BEB-B2F2-1CEFDA755BAD}.Release|x64.Build.0 = Release|Any CPU
 		{086281BF-C1B0-4BEB-B2F2-1CEFDA755BAD}.Release|x86.ActiveCfg = Release|Any CPU
 		{086281BF-C1B0-4BEB-B2F2-1CEFDA755BAD}.Release|x86.Build.0 = Release|Any CPU
+		{18C6ADC8-52D9-497E-AA0F-88512B204776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18C6ADC8-52D9-497E-AA0F-88512B204776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18C6ADC8-52D9-497E-AA0F-88512B204776}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{18C6ADC8-52D9-497E-AA0F-88512B204776}.Debug|x64.Build.0 = Debug|Any CPU
+		{18C6ADC8-52D9-497E-AA0F-88512B204776}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{18C6ADC8-52D9-497E-AA0F-88512B204776}.Debug|x86.Build.0 = Debug|Any CPU
+		{18C6ADC8-52D9-497E-AA0F-88512B204776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18C6ADC8-52D9-497E-AA0F-88512B204776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18C6ADC8-52D9-497E-AA0F-88512B204776}.Release|x64.ActiveCfg = Release|Any CPU
+		{18C6ADC8-52D9-497E-AA0F-88512B204776}.Release|x64.Build.0 = Release|Any CPU
+		{18C6ADC8-52D9-497E-AA0F-88512B204776}.Release|x86.ActiveCfg = Release|Any CPU
+		{18C6ADC8-52D9-497E-AA0F-88512B204776}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
