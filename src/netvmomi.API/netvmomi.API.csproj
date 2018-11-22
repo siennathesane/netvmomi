@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\netvmomi.APIClient.csproj" />
-    <ProjectReference Include="..\Model\netvmomi.Models.csproj" />
+    <ProjectReference Include="..\netvmomi.Client\netvmomi.APIClient.csproj" />
+    <ProjectReference Include="..\netvmomi.Model\netvmomi.Models.csproj" />
   </ItemGroup>
 
 </Project>

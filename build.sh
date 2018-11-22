@@ -5,7 +5,7 @@ dotnet restore --no-cache
 dotnet build --configuration "$buildConfiguration"
 dotnet pack --configuration "$buildConfiguration"
 
-PROJECTS=( Api Model Client )
+PROJECTS=( netvmomi.API  netvmomi.API.TechPreview  netvmomi.Client  netvmomi.Model )
 
 for i in "${PROJECTS[@]}"
 do
