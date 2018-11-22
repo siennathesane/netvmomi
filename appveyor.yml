@@ -1,0 +1,38 @@
+image:
+  - Visual Studio 2017
+  - ubuntu1604
+  - ubuntu1804
+
+platform:
+  - x86
+  - Any CPU
+
+configuration: Release
+
+environment:
+  nuget_api_key:
+    secure: CsGO642XhYRAnFDuITF7GJhSuzn7qVloLhgDYIY11g5Kr2wP+W9M4VS7zHidJUWd
+
+install: 
+    # turns out appveyor has powershell on their linux workers so this has to be `cmd`.
+  - cmd: choco install gitversion.portable -y
+  # - sh: dotnet tool global install gitversion
+
+before_build:
+  - ps: dotnet restore
+  - cmd: gitversion /l console /output buildserver /b %APPVEYOR_REPO_BRANCH% /ensureassemblyinfo /updateassemblyinfo AssemblyInfo.cs
+  # - sh: gitversion -ensureassemblyinfo -l console -output buildserver -b $(APPVEYOR_REPO_BRANCH)
+
+build_script:
+  - ps: dotnet build
+
+test_script:
+  - ps: dotnet test .\test\netvmomi.Test\netvmomi.Test.csproj
+
+deploy_script:
+  - ps: gci -Directory .\src\ | ForEach-Object { pushd (join-path $_.FullName -ChildPath bin | join-path -ChildPath release); ls *.nupkg | foreach-object { dotnet nuget push $_.FullName -s https://nuget.org -k (get-item env:nuget_api_key).Value }; popd }
+
+
+# if you need it.
+# on_finish:
+#   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
